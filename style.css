@@ -1,0 +1,129 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(digital-7.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: myFirstFont;
+}
+
+body {
+    padding: 100px 500px;
+    display: flex;
+    justify-content: left;
+    align-items: top;
+    min-height: 100vh;
+    background: none;
+    background-color: none;
+
+}
+
+.container {
+    position: relative;
+    width: 300px;
+    height: 390px;
+    background: #DAD6D3;
+    padding: 20px 15px 10px;
+    border:5px solid;
+    border-width: 5px;
+    border-color: #4E2B62;
+    border-radius: 20px;
+    box-shadow: 25px 25px 75px rgba(0,0,0,0.25),
+    10px 10px 70px rgba(0,0,0,0.25);
+}
+
+.calculator {
+    position: relative;
+    display: grid;
+    justify-items: center;
+}
+
+.calculator .output {
+    position: relative;
+    grid-column: span 4;
+    height: 65px;
+    width: 90%;
+    background: #BFBFA1;
+    margin-bottom: 10px;
+    border: 2px solid;
+    border-radius: 15px;
+    box-shadow: 0 0 0 2px rgba(0,0,0,0.75);
+    text-align: right;
+    padding: 10px;
+    font-size: 2em;
+}
+
+.calculator span {
+    position: relative;
+    display: grid;
+    min-height: 50px;
+    min-width: 50px;
+    margin: 2px;
+    color: #4E2B62;
+    user-select: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 700;
+    place-items: center;
+    background-color: #ffffff;
+    border:5px solid;
+    border-radius: 10px;
+    border-color: #4E2B62;
+    border-width: 4px;    
+}
+
+.calculator span:hover {
+    border-color: #ffffff;
+    color: #ffffff;
+    background-color: #4E2B62;
+
+}
+
+.calculator span i {
+    position: relative;
+    font-style: normal;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.calculator .clear {
+    grid-column: span 2;
+    width: 115px;
+    background: #E6A130;
+}
+
+.calculator .plus{
+    grid-row: span 2;
+    height: 110px;
+
+}
+
+   .output{
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+
+  .output .previous-operand{
+    color: rgba(20, 20, 20, 0.75);
+    font-size: 15px;
+  }
+
+  .output .current-operand{
+    color: #000;
+    font-size: 25px;
+  }
+
+  .footText {
+    padding: 25px 20px;
+    color: #4E2B62;
+    font-weight: 600;
+  }
